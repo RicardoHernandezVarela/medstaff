@@ -1,2 +1,2 @@
 # medstaff
- An application to manage medical staff and their schedule, built with react-redux.
+ An application to manage medical staff and their schedule, built with react and redux.
