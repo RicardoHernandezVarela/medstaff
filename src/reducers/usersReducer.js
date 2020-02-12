@@ -10,7 +10,7 @@ export default (state = INITIAL_STATE, action) => {
             return {
                 ...state, 
                 page: action.page,
-                totalPages: action.total_pages,
+                totalPages: action.totalPages,
                 users: [
                     ...state.users,
                     ...action.data
