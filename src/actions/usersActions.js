@@ -12,9 +12,10 @@ export const getUsersData = (urlPage) => async (dispatch) => {
 
         dispatch ({
             type: 'GET_USERS',
+            data: responseData.data,
             page: responseData.page,
             totalPages: responseData.total_pages,
-            data: responseData.data
+            total: responseData.total
         });
 
     } catch (error) {

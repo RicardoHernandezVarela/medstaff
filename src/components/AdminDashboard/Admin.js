@@ -7,15 +7,17 @@ import * as usersActions from '../../actions/usersActions';
 class Admin extends Component {
 
     componentDidMount() {
-        this.props.getUsersData(this.props.page + 1);
+        this.props.getUsersData(this.props.page);
     }
 
     componentDidUpdate() {
-        let { page, totalPages } = this.props;
+       let { page, totalPages, loading } = this.props;
 
-        if (page < totalPages) {
-            this.props.getUsersData(this.props.page + 1);
-        }
+       if (!loading) console.log(page, totalPages);
+
+       if (page < totalPages && !loading) {
+           this.props.getUsersData(this.props.page + 1);
+       }        
     }
 
     render() {
