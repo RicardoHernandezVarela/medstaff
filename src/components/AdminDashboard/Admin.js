@@ -19,6 +19,14 @@ class Admin extends Component {
     }
 
     render() {
+        const loading = this.props.loading;
+
+        if (loading) {
+            return (
+                <h1>Loading...</h1>
+            )
+        }
+
         return (
             <h1>Staff list - Admin</h1>
         )
