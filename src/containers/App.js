@@ -3,7 +3,7 @@ import './App.css';
 
 /* Import components */
 //import AdminDashboard from './components/AdminDashboard/AdminDashboard';
-import Admin from './components/AdminDashboard/Admin';
+import Admin from '../components/AdminDashboard/Admin';
 
 function App() {
   return (

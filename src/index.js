@@ -8,7 +8,7 @@ import reduxThunk from 'redux-thunk';
 import reducers from './reducers';
 
 /* Import components */
-import App from './App';
+import App from './containers/App';
 
 import './index.css';
 

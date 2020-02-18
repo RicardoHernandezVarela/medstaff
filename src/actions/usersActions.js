@@ -1,7 +1,10 @@
+/* Import types */
+import * as usersTypes from '../types/usersTypes';
+
 export const getUsersData = (urlPage) => async (dispatch) => {
 
     dispatch ({
-        type: 'LOADING'
+        type: usersTypes.LOADING
     });
 
     try {
@@ -11,7 +14,7 @@ export const getUsersData = (urlPage) => async (dispatch) => {
         const responseData = await usersResponse.json();
 
         dispatch ({
-            type: 'GET_USERS',
+            type: usersTypes.GET_USERS,
             data: responseData.data,
             page: responseData.page,
             totalPages: responseData.total_pages,
@@ -20,7 +23,7 @@ export const getUsersData = (urlPage) => async (dispatch) => {
 
     } catch (error) {
         dispatch({
-            type: 'ERROR',
+            type: usersTypes.ERROR,
             error: error
         })
     }

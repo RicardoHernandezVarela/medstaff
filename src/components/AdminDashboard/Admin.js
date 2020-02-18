@@ -21,7 +21,7 @@ class Admin extends Component {
     }
 
     render() {
-        const loading = this.props.loading;
+        const { users, loading } = this.props;
 
         if (loading) {
             return (
@@ -30,13 +30,13 @@ class Admin extends Component {
         }
 
         return (
-            <h1>Staff list - Admin</h1>
+            <h1>Staff list - Admin - {users.length}</h1>
         )
     }
 }
 
 const mapStateToProps = (reducers) => {
-    return reducers.usersReducer
+    return reducers.usersReducer;
 }
 
 export default connect(mapStateToProps, usersActions)(Admin);
