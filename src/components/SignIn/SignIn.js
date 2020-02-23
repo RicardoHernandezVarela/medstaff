@@ -45,6 +45,7 @@ class SignInPage extends Component {
     }
 
     onChange = (event) => {
+        console.log(event.target.name)
         this.setState({
             [event.target.name]: event.target.value
         });
