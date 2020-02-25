@@ -4,6 +4,9 @@ import { connect } from 'react-redux';
 /* Import actions */
 import * as signInActions from '../../actions/signInActions';
 
+/* Import ROUTES */
+import * as ROUTES from '../../routes/Routes';
+
 class LogIn extends Component {
 
     onChange = (event) => {
@@ -23,6 +26,9 @@ class LogIn extends Component {
         };
         
         this.props.logInUser('https://reqres.in/api/login', data)
+            .then(() => {
+                this.props.history.push(ROUTES.HOME);
+            })
     }
 
     componentDidMount() {
